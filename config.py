@@ -1,0 +1,5 @@
+
+
+
+
+MAX_CHARACTERS = 10000
