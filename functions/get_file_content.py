@@ -3,6 +3,26 @@ from config import MAX_CHARACTERS
 
 
 
+schema_get_file_content = {
+    "type": "function",
+    "function": {
+        "name": "get_file_content",
+        "description": "Retrieves the content of a specified file relative to the working directory",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": "The content of the file, truncated to a maximum of 10000 characters",
+                },
+            },
+            "required": ["file_path"],
+        },
+    },
+}
+
+
+
 def get_file_content(working_directory: str, file_path: str) -> str:
 
 
